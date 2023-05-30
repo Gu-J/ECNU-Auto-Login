@@ -1,0 +1,273 @@
+body {
+  margin: 0px;
+  font-family: 'STZhongsong';
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.wrapper {
+  width: 400px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Switch开关样式 */
+  /* 必须是input为 checkbox class 添加 switch 才能实现以下效果 */
+  /* 当input[type=checkbox]被选中时：伪元素显示下面样式 位置发生变化 */
+  font-size: 18px;
+}
+.wrapper input[type='checkbox'].switch {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+.wrapper input[type='checkbox'].switch::after {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0, 0, 2px, #999;
+  transition: 0.4s;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.wrapper input[type='checkbox'].switch:checked {
+  background: #13ce66;
+}
+.wrapper input[type='checkbox'].switch:checked::after {
+  content: '';
+  position: absolute;
+  left: 55%;
+  top: 2px;
+}
+.wrapper section > .title {
+  display: flex;
+  background-color: #a90021;
+  height: 72px;
+  line-height: 72px;
+}
+.wrapper section > .title .left {
+  width: 80px;
+  height: 72px;
+}
+.wrapper section > .title .left .return_Btn {
+  color: white;
+  cursor: pointer;
+}
+.wrapper section > .title .left img {
+  width: 50px;
+  height: 50px;
+  margin-top: 11px;
+  margin-left: 15px;
+}
+.wrapper section > .title .right {
+  width: 100%;
+  text-align: center;
+}
+.wrapper section > .title .txt {
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 31px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+.wrapper #more_1 {
+  border-bottom: 1px solid #000000;
+}
+.wrapper #more_2 {
+  border-bottom: 1px solid #000000;
+}
+.wrapper #more_3 {
+  border-bottom: 1px solid #000000;
+}
+.wrapper div.item {
+  display: flex;
+}
+.wrapper div.item > .title {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+.wrapper div.item > .title .left {
+  width: 100%;
+  text-indent: 20px;
+}
+.wrapper div.item > .title .right {
+  width: 80px;
+  padding-top: 8px;
+}
+.wrapper #more_2 {
+  flex-direction: column;
+}
+.wrapper #more_2 .body {
+  width: 100%;
+  border-top: 1px solid #000000;
+}
+.wrapper #more_2 .body .forminput {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.wrapper #more_2 .body .forminput input[type="text"],
+.wrapper #more_2 .body .forminput input[type="password"] {
+  width: 80%;
+  height: 36px;
+  margin-top: 5px;
+  margin-left: 4%;
+  padding-left: 40px;
+}
+.wrapper #more_2 .body .forminput .icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 14px;
+  left: 6%;
+}
+.wrapper #section_btn {
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper #section_btn .btn {
+  width: 140px;
+  height: 40px;
+  background-color: #a90021;
+  border: none;
+  border-radius: 34px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+.wrapper #section_more {
+  margin-bottom: 20px;
+}
+.wrapper #section_more ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0px;
+}
+.wrapper #section_more ul li {
+  float: left;
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 13px;
+  color: #00B2FF;
+  cursor: pointer;
+}
+.wrapper #section_more ul li a {
+  float: left;
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 13px;
+  color: #00B2FF;
+  text-decoration: none;
+}
+.wrapper #section2 .body {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrapper #section2 .item {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+}
+.wrapper #section2 .item #last_res {
+  position: absolute;
+}
+.wrapper #section2 .item + .item {
+  border-top: 1px solid #000000;
+}
+.wrapper #section2 .item .btn {
+  width: 140px;
+  height: 40px;
+  background-color: #a90021;
+  border: none;
+  border-radius: 34px;
+  font-size: 16px;
+  color: white;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.wrapper #section3 .body {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrapper #section3 .body dl {
+  width: 100%;
+  min-height: 32px;
+  margin: 0px;
+}
+.wrapper #section3 .body dl + dl {
+  border-top: 1px solid #000000;
+}
+.wrapper #section4 dl {
+  margin: 0;
+  padding: 18px;
+}
+.wrapper #section4 dl + dl {
+  border-top: 1px solid #000000;
+}
+.wrapper #section6 .body #more_4 {
+  border-bottom: 1px solid #000000;
+}
+.wrapper #section6 .body #more_5 {
+  border-bottom: 1px solid #000000;
+}
+.wrapper #section6 .body .item {
+  min-height: 50px;
+  line-height: 50px;
+}
+.wrapper #section6 .body .item .btn {
+  width: 140px;
+  height: 40px;
+  background-color: #a90021;
+  border: none;
+  border-radius: 34px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+.wrapper #section8 dl {
+  width: 100%;
+  min-height: 32px;
+  margin: 0px;
+}
+.wrapper #section8 dl + dl {
+  border-top: 1px solid #000000;
+}
+.wrapper #uploadBox {
+  margin: 10px auto;
+}
+.wrapper #uploadBox input[type='file'] {
+  display: none;
+}
+.wrapper #uploadBox img {
+  border: 1px solid #cbcbcb;
+}
+.wrapper #yy_res {
+  position: absolute;
+  top: 66px;
+}
+/*# sourceMappingURL=main.css.map */

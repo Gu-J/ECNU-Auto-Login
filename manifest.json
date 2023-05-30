@@ -1,0 +1,32 @@
+{
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "10215102412@stu.ecnu.edu.cn"
+        }
+      },
+    "manifest_version": 3,
+    "name": "ECNU Auto Login",
+    "version": "1.1.230.528",
+    "description": "Simple version based on Image Subtraction.",
+    "action": {
+        "default_icon": "img/EALlogo.png",
+        "default_title":"ECNU Auto Login",
+        "default_popup":"popup.html"
+    },
+    
+    "content_scripts":[
+        {
+            "matches":["*://portal1.ecnu.edu.cn/*"],
+            "js": ["js/recognition.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches":[
+                "*://elearning.ecnu.edu.cn/*"],
+            "js": ["js/click_enter.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": ["tabs","notifications","storage"]
+    
+}

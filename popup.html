@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>ECNU Auto Login</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
+</head>
+<body>
+<div class="wrapper">
+    <section id="section1">
+        <div class="title">
+            <div class="left">
+                <img id="ECNU" src="img/logo.png" alt="" style="cursor: pointer;">
+            </div>
+            <div class="right">
+                <span class="txt" id="EAL" style="cursor: pointer">ECNU Auto Login</span>
+            </div>
+        </div>
+        <div id="more_1" class="item">
+            <div class="title">
+                <div class="left">
+                    开启ECNU Auto Login
+                </div>
+                <div class="right">
+                    <input type="checkbox" id="switch1" class="switch">
+                </div>
+            </div>
+        </div>
+        <div id="more_2" class="item">
+            <div class="title">
+                <div class="left">
+                    由此插件输入账号密码
+                </div>
+                <div class="right">
+                    <input type="checkbox" id="switch2" class="switch">
+                </div>
+            </div>
+            <div class="body" id="switch2_body" style="display: none;">
+                <div class="forminput">
+                    <input type="text" id="inputuser" tabindex="1" placeholder="输入用户名" required="">
+                    <img id="u87_img" class="icon " src="img/u81.png">
+                </div>
+                <div class="forminput">
+                    <input type="password" id="inputpass" tabindex="2" autocomplete="off" placeholder="输入密码"
+                           required="">
+                    <img id="u87_img" class="icon " src="img/u82.svg">
+                </div>
+                
+            </div>
+        </div>
+        <div id="more_3" class="item">
+            <div class="title">
+                <div class="left">
+                    自动点击登录
+                </div>
+                <div class="right">
+                    <input type="checkbox" id="switch3" class="switch">
+                </div>
+            </div>
+        </div>
+        <div id="section_btn" class="item">
+            <button type="button" class="btn" id="daxia">大夏学堂</button>
+            <p>&emsp;&emsp;</p>
+            <button type="button" class="btn" id="gonggong">公共数据库</button>
+        </div>
+        <div id="section_more" class="item">
+            <ul style="border-right: 1px solid #000000;"><li id='sbcw_btn'>识别错误</li></ul>
+            <ul><li id='more_btn'>更多</li></ul>
+            <ul style="border-left: 1px solid #000000;"><li id='yy_btn'>关于</li></ul> 
+        </div>
+    </section>
+    <section id="section2">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回</span>
+            </div>
+            <div class="right">
+                <span class="txt">识别错误</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <div class="item">
+                <div class="left">
+                    上一次识别记录:&emsp;
+                </div>
+                <div class="right">
+                    <img id="last_img">
+                    <span id="last_res"></span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="left">
+                    正确结果应该是：
+                </div>
+                <div class="right">
+                    <input type="text" id="correct">
+                </div>
+            </div>
+            <div class="item">
+                <button type="button" class="btn" id="save">保存错误信息</button>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回</span>
+            </div>
+            <div class="right">
+                <span class="txt">关于</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <dl>
+                <dt>版本：</dt>
+                <dd>1.1.230.528</dd>
+            </dl>
+            <dl>
+                <dt>统计:</dt>
+                <dd>正确率：<span id="accu"></span>%</dd>
+                <dd>正确次数：<span id="succ"></span></dd>
+                <dd>错误次数：<span id="fail"></span></dd>
+                <dd>总次数：<span id="total"></span></dd>
+                <div id="section_btn" class="item"><button type="button" class="btn" id="clr">清除所有数据</button></div>
+            </dl>
+            <dl>
+                <div id="section_btn" class="item">
+                    <button type="button" class="btn" id="chat">联系我们</button>
+                </div>
+            </dl>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回</span>
+            </div>
+            <div class="right">
+                <span class="txt">更多</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <dl>
+                <dd><span id="lib" style="color: #00B2FF;cursor: pointer;">图书馆</span></dd>
+            </dl>
+            <dl>
+                <dd><span id="soft" style="color: #00B2FF;cursor: pointer;">正版软件</span></dd>
+            </dl>
+            <dl>
+                <dd><span id="mail" style="color: #00B2FF;cursor: pointer;">邮箱</span></dd>
+            </dl>
+            <dl>
+                    <span id="test" style="font-size: 13px;cursor: pointer;">调试选项</span>
+            </dl>
+        </div>
+    </section>
+    <section id="section5">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回</span>
+            </div>
+            <div class="right">
+                <span class="txt">识别失败</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <div class="item">
+                <img src="img/u83.svg" alt="">
+            </div>
+            <div class="item">
+                感谢您的报错！
+            </div>
+        </div>
+    </section>
+    <section id="section6">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回</span>
+            </div>
+            <div class="right">
+                <span class="txt">调试选项</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <div id="more_4" class="item">
+                <div class="title">
+                    <div class="left">
+                        自动注销
+                    </div>
+                    <div class="right">
+                        <input type="checkbox" id="switch4" class="switch">
+                    </div>
+                </div>
+            </div>
+            <div id="more_5" class="item">
+                <div class="title">
+                    <div class="left">
+                        强制错误
+                    </div>
+                    <div class="right">
+                        <input type="checkbox" id="switch5" class="switch">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="left">
+                    上传图像并识别：
+                </div>
+                <div id="section_btn_low" class="right">
+                    <button type="button" class="btn" id="uploadHandleBtn">识别</button>
+                </div>
+            </div>
+            <div class="item">
+                <div id="uploadBox">
+                    <input id="uploadBoxInput" type="file" id="file" ref="file">
+                    <img id="uploadBoxImg" src="img/u84.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section7">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回 </span>
+            </div>
+            <div class="right">
+                <span class="txt">识别结果</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <div class="item">
+                空
+            </div>
+            <div id="section_btn_low" class="item">
+                <div class="left">
+                    <input type="text" id="inputCopy">
+                </div>
+                <div class="right">
+                    <button type="button" class="btn" id="copy">复制</button>
+                </div>
+            </div>
+            <div id="section_btn" class="item">
+                <button type="button" class="btn" id='sbcw_btn2'>识别错误</button>
+            </div>
+        </div>
+    </section>
+    <section id="section8">
+        <div class="title">
+            <div class="left">
+                <span class="return return_Btn"> < 返回</span>
+            </div>
+            <div class="right">
+                <span class="txt">联系我们</span>
+            </div>
+            <div class="left"></div>
+        </div>
+        <div class="body">
+            <dl>
+                <dt>开发者：</dt>
+                <dd>顾杰</dd>
+                <dd>王子锐</dd>
+            </dl>
+            <dl>
+                <dt>联系方式：</dt>
+                <dd>QQ：</dd>
+                <dd>Email：</dd>
+            </dl>
+        </div>
+    </section>
+</div>
+</body>
+
+<script src="js/popup.js"></script>
+
+</html>
