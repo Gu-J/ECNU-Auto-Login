@@ -64,8 +64,10 @@ body {
   height: 72px;
 }
 .wrapper section > .title .left .return_Btn {
+  font-family: 'YouYuan';
   color: white;
   cursor: pointer;
+  margin-left: 5%;
 }
 .wrapper section > .title .left img {
   width: 50px;
@@ -170,6 +172,10 @@ body {
   color: white;
   cursor: pointer;
 }
+.wrapper #section_btn .btn:hover {
+  background-color: #671321;
+  color: white;
+}
 .wrapper #section_btn2 {
   height: 10px;
 }
@@ -182,6 +188,10 @@ body {
   font-size: 16px;
   color: white;
   cursor: pointer;
+}
+.wrapper #section_btn2 .btn2:hover {
+  background-color: #671321;
+  color: white;
 }
 .wrapper #section_btn3 {
   height: 60px;
@@ -197,6 +207,29 @@ body {
   font-size: 16px;
   color: white;
   cursor: pointer;
+}
+.wrapper #section_btn3 .btn3:hover {
+  background-color: #671321;
+  color: white;
+}
+.wrapper #section_btn4 {
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper #section_btn4 .btn4 {
+  width: 140px;
+  height: 40px;
+  background-color: #a90021;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+.wrapper #section_btn4 .btn4:hover {
+  background-color: #671321;
+  color: white;
 }
 .wrapper #section_more {
   margin-bottom: 20px;
@@ -256,6 +289,10 @@ body {
   margin-right: auto;
   cursor: pointer;
 }
+.wrapper #section2 .item .btn:hover {
+  background-color: #671321;
+  color: white;
+}
 .wrapper #section2 .item2 {
   width: 100%;
   height: 80px;
@@ -276,6 +313,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+.wrapper #section2 .item2 .btn:hover {
+  background-color: #671321;
+  color: white;
 }
 .wrapper #section3 .body {
   padding-left: 0px;
@@ -298,16 +339,20 @@ body {
 .wrapper #section4 ln {
   display:inline-block;
   width: 49%;
+  height: auto;
   text-align: center;
-  color: #00B2FF;
+  color: #FFFFFF;
+  font-family: 'STZhongsong';
+  background-color: #a90021;
+  border: none;
+  border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
 
 }
 .wrapper #section5 .body {
-  padding: 18px;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 .wrapper #section5 .body .item {
   min-height: 50px;
@@ -333,17 +378,21 @@ body {
   color: white;
   cursor: pointer;
 }
+.wrapper #section6 .body .item .btn:hover {
+  background-color: #671321;
+  color: white;
+}
 .wrapper #section7 .body {
   padding-left: 0px;
   padding-right: 0px;
 }
 .wrapper #section7 .item {
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   padding: 14px;
 }
-.wrapper #section7 .item #last_res {
+.wrapper #section7 .item #rec_res {
   position: absolute;
 }
 .wrapper #section7 .item + .item{
@@ -361,6 +410,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+.wrapper #section7 .item .btn:hover {
+  background-color: #671321;
+  color: white;
 }
 .wrapper #section7 .item2 {
   width: 100%;
@@ -382,6 +435,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+.wrapper #section7 .item .btn:hover {
+  background-color: #671321;
+  color: white;
 }
 .wrapper #section8 dl {
   margin: 0;

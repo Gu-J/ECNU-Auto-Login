@@ -16,6 +16,7 @@
     G.section7 = document.getElementById('section7');
     G.section8 = document.getElementById('section8');
     G.returnBtn = document.getElementsByClassName('return_Btn');
+    G.chatBtn = document.getElementById('chat2');
     G.sbcwBtn = document.getElementById('sbcw_btn');
     G.sbcwBtn2 = document.getElementById('sbcw_btn2');
     G.yyBtn = document.getElementById('yy_btn');
@@ -89,8 +90,7 @@
           });
     }
     function datashow_sbcw()
-    {
-        
+    {        
         chrome.storage.local.get(["last_img"]).then((result) => {
             if(result["last_img"])document.getElementById("last_img").src=result["last_img"]
             else document.getElementById("last_img").src='img/empty.png'
@@ -123,8 +123,29 @@
         chrome.storage.local.get(["force_fail"]).then((result) => {
             if(result["force_fail"]=="1")G.switch5.checked=true
             else G.switch5.checked=false
+          });    
+    }
+    async function upload()
+    {
+        switchShowTabs('section7');
+        await recognize(document.getElementById("uploadBoxImg"))
+        chrome.storage.local.get(["last_img"]).then((result) => {
+            if(result["last_img"])
+            {
+                document.getElementById("rec_img").src=result["last_img"];
+                document.getElementById("inputCopy").value=result["last_img"]
+            }
           });
-        
+        chrome.storage.local.get(["last_res"]).then((result) => {
+            if(result["last_res"])
+            {
+                document.getElementById("rec_res").textContent=result["last_res"]
+            }
+          });
+        document.getElementById("copy").addEventListener('click',function(){
+            document.getElementById("inputCopy").select();
+            document.execCommand('copy')
+        })
     }
 
     const fr = new FileReader()
@@ -165,10 +186,7 @@
             else switch3_true()
           });
 
-
-
-          
-
+        
         document.getElementById("daxia").addEventListener('click',function(){
             chrome.tabs.create({ url: "https://elearning.ecnu.edu.cn/" });
         })
@@ -176,7 +194,7 @@
             chrome.tabs.create({ url: "https://service.ecnu.edu.cn/_layouts/15/ecnu/index.aspx" });
         })
         document.getElementById("EAL").addEventListener('click',function(){
-            chrome.tabs.create({ url: "https://addons.mozilla.org/zh-CN/firefox/addon/ecnu-auto-login/" });
+            chrome.tabs.create({ url: "https://github.com/Gu-J/ECNU-Auto-Login" });
         })
         document.getElementById("ECNU").addEventListener('click',function(){
             chrome.tabs.create({ url: "https://www.ecnu.edu.cn/" });
@@ -211,12 +229,32 @@
             }
         },false)
 
-
-
         for (let i = 0; i < G.returnBtn.length; i++) {
-            G.returnBtn[i].addEventListener('click', (event)=>{
-                switchShowTabs('section1');
-            },false)
+            if(i == 3){
+                G.returnBtn[i].addEventListener('click', (event)=>{
+                    switchShowTabs('section2');
+                },false)
+            }
+            else if(i == 4){
+                G.returnBtn[i].addEventListener('click', (event)=>{
+                    switchShowTabs('section4');
+                },false)
+            }
+            else if(i == 5){
+                G.returnBtn[i].addEventListener('click', (event)=>{
+                    switchShowTabs('section6');
+                },false)
+            }
+            else if(i == 6){
+                G.returnBtn[i].addEventListener('click', (event)=>{
+                    switchShowTabs('section3');
+                },false)
+            }
+            else{
+                G.returnBtn[i].addEventListener('click', (event)=>{
+                    switchShowTabs('section1');
+                },false)
+            }
         }
 
         G.sbcwBtn.addEventListener('click', (event)=>{
@@ -226,7 +264,6 @@
                 var img=document.getElementById('last_img').src
                 var res=document.getElementById('last_res').textContent
                 var correct=document.getElementById('correct').value
-
                 var link=document.createElement('a')
                 link.href=img
                 link.download=res+'@'+correct+'.png'
@@ -245,7 +282,6 @@
                 var img=document.getElementById('last_img').src
                 var res=document.getElementById('last_res').textContent
                 var correct=document.getElementById('correct').value
-
                 var link=document.createElement('a')
                 link.href=img
                 link.download=res+'@'+correct+'.png'
@@ -266,6 +302,10 @@
             document.getElementById('chat').addEventListener('click', (event)=>{
                 switchShowTabs('section8');
             },false);
+        },false)
+
+        G.chatBtn.addEventListener('click', (event)=>{
+            switchShowTabs('section8');
         },false)
 
         G.sectionBtn.addEventListener('click', (event)=>{
@@ -293,12 +333,11 @@
                 init_section6();
                 switchShowTabs('section6');
                 document.getElementById('uploadHandleBtn').addEventListener('click', (event)=>{
-                    switchShowTabs('section7');
+                    upload();
                 },false);
             },false);
         },false)
     }
-
 
     function switchShowTabs(obj){
         if(typeof obj !== 'string') return;
@@ -312,7 +351,6 @@
         G.section8.style.display = 'none';
         document.getElementById(obj).style.display = 'block';
     }
-
 
     init();
 }).call(this);

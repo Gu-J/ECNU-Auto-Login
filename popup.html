@@ -72,7 +72,7 @@
     <section id="section2">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回</span>
+                <span class="return_Btn"> < 返回</span>
             </div>
             <div class="right">
                 <span class="txt">识别错误</span>
@@ -85,7 +85,7 @@
                     上一次识别记录:&emsp;
                 </div>
                 <div class="right">
-                    <img id="last_img">
+                    <img id="last_img"src="img/empty.png">
                     <span id="last_res"></span>
                 </div>
             </div>
@@ -105,7 +105,7 @@
     <section id="section3">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回</span>
+                <span class="return_Btn"> < 返回</span>
             </div>
             <div class="right">
                 <span class="txt">关于</span>
@@ -135,35 +135,37 @@
     <section id="section4">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回</span>
+                <span class="return_Btn"> < 返回</span>
             </div>
             <div class="right">
                 <span class="txt">更多</span>
             </div>
-            <div class="left"></div>
+            <div class="left">
+                <img id="test" src="img/test.png" style="cursor: pointer;width: 25px;height: 25px;margin-top:25px;" >
+            </div>
         </div>
         <div class="body">
-            <dl>
-                <ln id="lib">图书馆</ln>
-                <ln id="netAut">校园网登录</ln>
-            </dl>
-            <dl>
-                <ln id="soft">正版软件</ln>
-                <ln id="xg">学工处</ln>
-            </dl>
-            <dl>
-                <ln id="mail">邮箱</ln>
-                <ln id="PE">公体俱乐部</ln>
-            </dl>
-            <dl>
-                    <span id="test" style="font-size: 13px;cursor: pointer;">调试选项</span>
-            </dl>
+            <div id="section_btn4" class="item">
+                <button type="button" class="btn4" id="lib">图书馆</button>
+                <p>&emsp;&emsp;</p>
+                <button type="button" class="btn4" id="netAut">校园网登录</button>
+            </div>
+            <div id="section_btn4" class="item">
+                <button type="button" class="btn4" id="soft">正版软件</button>
+                <p>&emsp;&emsp;</p>
+                <button type="button" class="btn4" id="xg">学工处</button>
+            </div>
+            <div id="section_btn4" class="item">
+                <button type="button" class="btn4" id="mail">邮箱</button>
+                <p>&emsp;&emsp;</p>
+                <button type="button" class="btn4" id="PE">公体俱乐部</button>
+            </div>    
         </div>
     </section>
     <section id="section5">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回</span>
+                <span class="return_Btn"> < 返回</span>
             </div>
             <div class="right">
                 <span class="txt">识别失败</span>
@@ -172,17 +174,22 @@
         </div>
         <div class="body">
             <div class="item">
-                <img src="img/u83.svg" alt="">
+                <img src="img/u83.svg" alt=""style=" padding: 18px;">
             </div>
-            <div class="item">
+        </div>
+        <div class="body">
+            <div class="item" >
                 感谢您的报错！
-            </div>
+            </div> 
+        </div>
+        <div id="section_btn3" class="item">
+            <button type="button" class="btn3" id="chat2">联系我们</button>
         </div>
     </section>
     <section id="section6">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回</span>
+                <span class="return_Btn"> < 返回</span>
             </div>
             <div class="right">
                 <span class="txt">调试选项</span>
@@ -231,7 +238,7 @@
     <section id="section7">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回 </span>
+                <span class="return_Btn"> < 返回 </span>
             </div>
             <div class="right">
                 <span class="txt">识别结果</span>
@@ -241,16 +248,16 @@
         <div class="body">
             <div class="item">
                 <div class="left">
-                    识别记录:
+                    识别记录:&emsp;
                 </div>
                 <div class="right">
-                    <img id="last_img">
-                    <span id="last_res"></span>
+                    <img id="rec_img" src="img/empty.png">
+                    <span id="rec_res"></span>
                 </div>
             </div>
             <div class="item">
                 <div class="left">
-                    识别结果:
+                    图像url：
                 </div>
                 <div class="left">
                     <input type="text" id="inputCopy">
@@ -267,7 +274,7 @@
     <section id="section8">
         <div class="title">
             <div class="left">
-                <span class="return return_Btn"> < 返回</span>
+                <span class="return_Btn"> < 返回</span>
             </div>
             <div class="right">
                 <span class="txt">联系我们</span>
@@ -291,5 +298,5 @@
 </body>
 
 <script src="js/popup.js"></script>
-
+<script src="js/popup_rec.js"></script>
 </html>
