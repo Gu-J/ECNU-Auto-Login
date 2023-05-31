@@ -6,7 +6,7 @@
       },
     "manifest_version": 3,
     "name": "ECNU Auto Login",
-    "version": "1.1.230.528",
+    "version": "1.2.230.531",
     "description": "Simple version based on Image Subtraction.",
     "action": {
         "default_icon": "img/EALlogo.png",

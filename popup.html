@@ -97,7 +97,7 @@
                     <input type="text" id="correct">
                 </div>
             </div>
-            <div class="item">
+            <div class="item2">
                 <button type="button" class="btn" id="save">保存错误信息</button>
             </div>
         </div>
@@ -123,11 +123,11 @@
                 <dd>正确次数：<span id="succ"></span></dd>
                 <dd>错误次数：<span id="fail"></span></dd>
                 <dd>总次数：<span id="total"></span></dd>
-                <div id="section_btn" class="item"><button type="button" class="btn" id="clr">清除所有数据</button></div>
+                <div id="section_btn3" class="item"><button type="button" class="btn3" id="clr">清除所有数据</button></div>
             </dl>
             <dl>
-                <div id="section_btn" class="item">
-                    <button type="button" class="btn" id="chat">联系我们</button>
+                <div id="section_btn3" class="item">
+                    <button type="button" class="btn3" id="chat">联系我们</button>
                 </div>
             </dl>
         </div>
@@ -144,13 +144,16 @@
         </div>
         <div class="body">
             <dl>
-                <dd><span id="lib" style="color: #00B2FF;cursor: pointer;">图书馆</span></dd>
+                <ln id="lib">图书馆</ln>
+                <ln id="netAut">校园网登录</ln>
             </dl>
             <dl>
-                <dd><span id="soft" style="color: #00B2FF;cursor: pointer;">正版软件</span></dd>
+                <ln id="soft">正版软件</ln>
+                <ln id="xg">学工处</ln>
             </dl>
             <dl>
-                <dd><span id="mail" style="color: #00B2FF;cursor: pointer;">邮箱</span></dd>
+                <ln id="mail">邮箱</ln>
+                <ln id="PE">公体俱乐部</ln>
             </dl>
             <dl>
                     <span id="test" style="font-size: 13px;cursor: pointer;">调试选项</span>
@@ -207,12 +210,14 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="left">
-                    上传图像并识别：
-                </div>
-                <div id="section_btn_low" class="right">
-                    <button type="button" class="btn" id="uploadHandleBtn">识别</button>
+            <div class="item2">
+                <div class="title">
+                    <div class="left">
+                        上传图像并识别：
+                    </div>
+                    <div id="section_btn2" class="right">
+                        <button type="button" class="btn2" id="uploadHandleBtn">识别</button>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -235,17 +240,26 @@
         </div>
         <div class="body">
             <div class="item">
-                空
+                <div class="left">
+                    识别记录:
+                </div>
+                <div class="right">
+                    <img id="last_img">
+                    <span id="last_res"></span>
+                </div>
             </div>
-            <div id="section_btn_low" class="item">
+            <div class="item">
+                <div class="left">
+                    识别结果:
+                </div>
                 <div class="left">
                     <input type="text" id="inputCopy">
                 </div>
-                <div class="right">
-                    <button type="button" class="btn" id="copy">复制</button>
+                <div id="section_btn2" style="padding-left:60px">
+                    <button type="button" class="btn2" id="copy">复制</button>
                 </div>
             </div>
-            <div id="section_btn" class="item">
+            <div id="section_btn" class="item2">
                 <button type="button" class="btn" id='sbcw_btn2'>识别错误</button>
             </div>
         </div>

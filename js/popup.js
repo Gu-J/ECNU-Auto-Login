@@ -176,7 +176,7 @@
             chrome.tabs.create({ url: "https://service.ecnu.edu.cn/_layouts/15/ecnu/index.aspx" });
         })
         document.getElementById("EAL").addEventListener('click',function(){
-            chrome.tabs.create({ url: "https://github.com/Gu-J/ECNU-Auto-Login" });
+            chrome.tabs.create({ url: "https://addons.mozilla.org/zh-CN/firefox/addon/ecnu-auto-login/" });
         })
         document.getElementById("ECNU").addEventListener('click',function(){
             chrome.tabs.create({ url: "https://www.ecnu.edu.cn/" });
@@ -269,6 +269,7 @@
         },false)
 
         G.sectionBtn.addEventListener('click', (event)=>{
+            //更多
             switchShowTabs('section4');
             document.getElementById("mail").addEventListener('click',function(){
                 chrome.tabs.create({ url: "https://mail.stu.ecnu.edu.cn/" });
@@ -279,9 +280,21 @@
             document.getElementById("lib").addEventListener('click',function(){
                 chrome.tabs.create({ url: "https://lib.ecnu.edu.cn/" });
             })
+            document.getElementById("netAut").addEventListener('click',function(){
+                chrome.tabs.create({ url: "http://login.ecnu.edu.cn/" });
+            })
+            document.getElementById("xg").addEventListener('click',function(){
+                chrome.tabs.create({ url: "https://xgxt.ecnu.edu.cn/#/home" });
+            })
+            document.getElementById("PE").addEventListener('click',function(){
+                chrome.tabs.create({ url: "https://peclub.ecnu.edu.cn/" });
+            })
             document.getElementById('test').addEventListener('click', (event)=>{
                 init_section6();
                 switchShowTabs('section6');
+                document.getElementById('uploadHandleBtn').addEventListener('click', (event)=>{
+                    switchShowTabs('section7');
+                },false);
             },false);
         },false)
     }

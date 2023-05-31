@@ -59,7 +59,6 @@ body{
 
     font-size: 18px;
 
-
     section{
         & > .title{
             display: flex;
@@ -97,9 +96,6 @@ body{
         }
     }
 
-    #section1{
-
-    }
     #more_1{
         border-bottom: 1px solid #000000;
     }
@@ -123,6 +119,25 @@ body{
             .right{
                 width: 80px;
                 padding-top: 8px;
+            }
+        }
+    }
+    div.item2{
+        display: flex;
+
+        & > .title{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+
+            .left{
+                width: 100%;
+                text-indent: 20px;
+            }
+            .right{
+                width: 100px;
+                padding-top: 0px;
             }
         }
     }
@@ -172,6 +187,34 @@ body{
             color: white;
         }
     }
+    #section_btn2 {
+        height: 10px;
+      
+       .btn2{
+            width: 60px;
+            height: 30px;
+            background-color: rgba(169, 0, 33, 1);
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            color: white;
+        }
+    }
+    #section_btn3{
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+
+        .btn3{
+            width: 140px;
+            height: 40px;
+            background-color: rgba(169, 0, 33, 1);
+            border: none;
+            border-radius: 34px;
+            font-size: 16px;
+            color: white;
+        }
+    }
     #section_more{
         margin-bottom: 20px;
 
@@ -205,20 +248,31 @@ body{
     }
     #section2{
         .body{
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
         }
 
         .item{
             width: 100%;
-            height: 58px;
-            line-height: 58px;
+            height: 50px;
+            line-height: 50px;
+            padding: 10px;
 
             #last_res{
                 position: absolute;
             }
 
-            & + .item{
+            & + {
+                border-top: 1px solid #000000;
+            }
+
+            }
+        .item2{
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+
+            & + {
                 border-top: 1px solid #000000;
             }
 
@@ -230,7 +284,7 @@ body{
                 border-radius: 34px;
                 font-size: 16px;
                 color: white;
-                margin-top: 10px;
+                margin-top: 20px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -238,23 +292,16 @@ body{
     }
     #section3{
         .body{
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
 
             dl{
-                width: 100%;
-                min-height: 32px;
-                margin: 0px;
+                margin: 0;
+                padding: 10px;
 
                 & + dl{
                     border-top: 1px solid #000000;
                 }
-            }
-            dt{
-                //float: left;
-            }
-            dd{
-                //float: left;
             }
         }
     }
@@ -265,6 +312,17 @@ body{
 
             & + dl{
                 border-top: 1px solid #000000;
+            }
+        }
+    }
+    #section5{
+        .body{
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            .item{ 
+                min-height: 50px;
+                line-height: 50px;
             }
         }
     }
@@ -293,11 +351,54 @@ body{
             }
         }
     }
+    #section7{
+        .body{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .item{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding: 14px;
+
+            #last_res{
+                position: absolute;
+            }
+
+            & + {
+                border-top: 1px solid #000000;
+            }
+
+            }
+        .item2{
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+
+            & + {
+                border-top: 1px solid #000000;
+            }
+
+            .btn{
+                width: 140px;
+                height: 40px;
+                background-color: rgba(169, 0, 33, 1);
+                border: none;
+                border-radius: 34px;
+                font-size: 16px;
+                color: white;
+                margin-top: 0px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
     #section8{
         dl{
-            width: 100%;
-            min-height: 32px;
-            margin: 0px;
+            margin: 0;
+            padding: 10px;
 
             & + dl{
                 border-top: 1px solid #000000;
